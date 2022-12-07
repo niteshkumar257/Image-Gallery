@@ -1,11 +1,10 @@
 import React from "react";
-import "./App.css";
 import axios from "axios";
 import { useState } from "react";
 const App=()=> {
 
   // states
-const [image, setImage] = useState("");
+const [image, setImage] = useState('office');
 const clientId = "-vnra-cQVJk5Tm8pnUStm65eT6pyKFErwHzDy6GSzws";
 const [result, setResult] = useState([]);
 
@@ -34,7 +33,9 @@ return (
  </div>
  
  <div className="input">
-  <input onChange={handleChange} type="text" name="image"    placeholder="Search for images"/>
+  <input onChange={handleChange} type="text" name="image" 
+    value={image}
+     placeholder="Search for images"/>
  </div>
   <button onClick={handleSubmit} type="submit">Search</button>
 <div className="result">
